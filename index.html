@@ -10,7 +10,7 @@
                 float:left;
                 color:rgb(0, 0, 0);
                 width:600px;                
-                margin-top:300px
+                
                 
                 }
             #section{
@@ -24,51 +24,85 @@
             #location{
                 font-size: 20px;
             }        
-            
+            .menu{
+                border: 1px solid black;
+                padding:10px;
+                margin:10px;     
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            .foodp{
+                width:120px;
+                height:120px;
+                margin-left: 30px;
+
+            }
         </style>
 
     </head>
-    <body style="background-color:lightcyan">
-       <div id="block" style="background-color: silver; color:white; ">
+    <body style="background-color:#dcf442">
+       <div id="block" style="background-color:gray; color:white; ">
         <div id ="name" style="border: 2px solid black;
         padding:2px;">
               Beach House Cafe    
         </div>
         <div id="location">
             Address:1650 El Camino Real, San Francisco-95123
+            <section class="menu">
+                    <h2>Hours of Operation:</h2><br>
+                    Monday 10:AM to 11:00 PM<br>
+                    Tuesday 10:AM to 11:00 PM<br>
+                    Wednesday 10:AM to 11:00 PM<br>
+                    Thursday 10:AM to 11:00 PM<br>
+                    Friday 10:AM to 11:00 PM<br>
+                    Saturay 10:AM to 11:00 PM<br>   
+                </section>  
         </div>
         </div>
-        <div id="section">            
-                <h2>Hours of Operation:</h2><br>
-                Monday 10:AM to 11:00 PM<br>
-                Tuesday 10:AM to 11:00 PM<br>
-                Wednesday 10:AM to 11:00 PM<br>
-                Thursday 10:AM to 11:00 PM<br>
-                Friday 10:AM to 11:00 PM<br>
-                Saturay 10:AM to 11:00 PM<br>   
-                <hr>     
-                <h1>Menu</h1><br>
-                <p><h2>Breakfast:</h2><br>
+        <div id="section"> 
+                     
+               <i><b><u><h1> Menu</h1></u></b></i><br>
+                <section class="menu">
+                <h2><b><i><u>Breakfast</u></b></i></h2><br>
+                <img src="Food/b_1.jpg" class = "foodp">
+                <img src="Food/b_2.jpg" style="float:right" class="foodp"><br><br>
+
                 French Toast<br>
                 Oatmeal<br>
                 Fruit Salad<br>
                 Smoothies<br>
-                <hr>
-                <h2>Naan:</h2><br>
+                
+            </section>
+            <br>
+                
+                <section class="menu">
+                <h2><b><i><u>Naan</u></i></b></h2><br>
+                <img src="Food/N_1.jpg" class = "foodp">
+                <img src="Food/N_2.jpg" style="float:right" class="foodp"><br><br>
                 Butter Naan<br>
                 Garlic Naan<br>
                 Onion Naan<br>
-                <hr>
-                <h2>Curries:</h2><br>
+            </section>
+            <br>
+                <section class="menu">
+                <h2><b><i><u>Curries</u></i></b></h2><br>
+                <img src="Food/C_1.jpg" class = "foodp">
+                <img src="Food/C_2.jpg" style="float:right" class="foodp"><br><br>
                 Butter Chicken<br>
                 Paneer Butter Masala<br>
                 Mutton Ghosh<br>
-                <hr>
-                <h2>Desserts</h2><br>
+            </section>
+            <br>
+                <section class="menu">
+                <h2><b><i><u>Desserts</u></i></b></h2><br>
+                <img src="Food/D_1.jpg" class = "foodp">
+                <img src="Food/D_2.jpg" style="float:right" class="foodp"><br><br>
                 Chocolate Brownie<br>
                 Apple Pie<br>
                 Ice-Cream<br>    
+            </section>
             </p>
+            
 
             </div>    
         </div>
