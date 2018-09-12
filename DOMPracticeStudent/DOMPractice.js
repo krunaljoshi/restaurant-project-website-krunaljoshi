@@ -28,6 +28,14 @@ questions = [
 qIndex = 0;
 
 // Set up variables to hold element references, 'Feb'
+hidecreator = document.getElementById("BHideQC");
+showcreator = document.getElementById("BShowQC");
+hideanswer = document.getElementById("BHideA");
+displayanswer = document.getElementById("BShow");
+addquestion = document.getElementById("BAddQ");
+removequestion = document.getElementById("BRemove");
+forwardquestion = document.getElementById("BForward");
+backquestion = document.getElementById("BBack");
 
 // Example of variables and initialization
 qCountSpan = document.getElementById("qCount");
@@ -60,19 +68,25 @@ document.getElementsByTagName("body").onload = displayQuestion();
  BForward BBack BShow BShowQC BRemove BHideA BAddQ BHideQC */
 function initButtons() {
   // Show and hide creator
-  document.getElementById("BHideQC").onclick = hideCreator;
-  document.getElementById("BShowQC").onclick = showCreator;
+  hidecreator.addEventListener("click",hideCreator);
+  showcreator.addEventListener("click",showCreator);
+  hideanswer.addEventListener("click",hideAnswer);
+  displayanswer.addEventListener("click",displayAnswer);
+  addquestion.addEventListener("click",addQuestion);
+  removequestion.addEventListener("click",removeQuestion);
+  forwardquestion.addEventListener("click",forwardQuestion);
+  backquestion.addEventListener("click",backQuestion)
   // Show and hide answer
-  document.getElementById("BHideA").onclick = hideAnswer;
-  document.getElementById("BShow").onclick = displayAnswer;
+  
+  
   // Forward and back Questions
   // Remove question
   // Add question
-  document.getElementById("BAddQ").onclick = addQuestion;
+  //document.getElementById("BAddQ").onclick = addQuestion;
   //Remove Question
-  document.getElementById("BRemove").onclick = removeQuestion;
-  document.getElementById("BForward").onclick = forwardQuestion;
-  document.getElementById("BBack").onclick = backQuestion;
+  //document.getElementById("BRemove").onclick = removeQuestion;
+  //document.getElementById("BForward").onclick = forwardQuestion;
+ // document.getElementById("BBack").onclick = backQuestion;
 }
 
 /* You may want to define functions like the following to attach to buttons */
@@ -99,9 +113,14 @@ function removeQuestion(){
   var index  = questions.indexOf(questions[qIndex])
   if(index > -1){
     questions.splice(index,1);
+    qCountSpan.innerHTML = questions.length;
   }
-  if(qIndex < 1)
-  displayQuestion();
+  if(qIndex < questions.length){
+  displayQuestion() = false;
+  }else{
+    displayQuestion();
+  }
+
 
 
 }
@@ -127,24 +146,31 @@ function showCreator(){
 
 
 function forwardQuestion(){   
-   if(qIndex < questions.length-1){
-  qIndex = qIndex + 1;  
-  qIndexSpan.innerHTML = qIndex + 1;
+  if (questions.length <= 0) {
+    return;
+  }
+
+  if (qIndex < questions.length - 1) {
+    qIndex++;
+    qIndexSpan.innerHTML = qIndex + 1;
+  }
   displayQuestion();
-   }
 }
 
 function backQuestion(){
-  var index = questions.indexOf(questions[qIndex])
-  if(index > -1){
-    index = index - 1;
-    qIndexSpan.innerHTML = index - 1;
-    displayQuestion();
+  if (questions.length <= 0) {
+    return;
   }
-}
 
+  if (qIndex > 0 && qIndex < questions.length) {
+    qIndex--;
+    qIndexSpan.innerHTML = qIndex + 1;
+  }
+  displayQuestion();
+}
 function hideAnswer(){
   
     document.getElementById("contentA").classList.remove("on");
     document.getElementById("contentA").classList.add("off");
 }
+
