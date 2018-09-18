@@ -2,6 +2,9 @@
     <head>
             <link rel="icon" href="x.ico" sizes="16x16">
         <title>Beach House Cafe</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style type="text/css">
             #block{
                 
@@ -13,52 +16,64 @@
                 
                 
                 }
-            #section{
+            /* #section{
                 width:640px;
                 height:100%;
                 float:right;
                 color:rgb(0, 0, 0);
 
             
-            }    
+            }     */
             #location{
                 font-size: 20px;
-            }        
-            .menu{
+            }   
+            #name{
+
+            }       
+            /* .menu{
                 border: 1px solid black;
                 padding:10px;
                 margin:10px;     
                 font-family: Arial, Helvetica, sans-serif;
                 
-            }
-            .foodp{
+            /* } */
+            /* .foodp{
                 width:120px;
                 height:120px;
                 margin-left: 30px;
 
             }
-            a:link, a:visited {
-    background-color: #f44336;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-
-a:hover, a:active {
-    background-color: red;
-}
+             */
+             /* body{
+                 background-image: url("locationpic/bg.jpeg");                 
+                 background-size: 120%; 
+                 background-repeat: repeat;
+             }*/
+             .col{
+               
+             } 
         </style>
 
     </head>
-    <body style="background-color:#dcf442">
-       <div id="block" style="background-color:gray; color:white; ">
-        <div id ="name" style="border: 2px solid black;
-        padding:2px;">
-              Beach House Cafe    
+    <body style="background-color: #D9B08C">
+              
+              <p style="text-align:center; font-size:50px; color:white">Beach House Cafe</p>
+        
+        <div>
+                <nav class="navbar navbar-default navbar-sticky-top" style="color:#E3AFBC">
+                        <div class="container-fluid">                      
+                          <ul class="nav navbar-nav">
+                            <li><a href="index.html" style="color:#E3AFBC;">Home</a></li>
+                            <li><a href="bakery.html" style="color:#E3AFBC">Bakery</a></li>
+                            <li><a href="catering.html" style="color:#E3AFBC">Catering</a></li>
+                            <li><a href="delivery.html" style="color:#E3AFBC;">Delivery</a></li>                            
+                          </ul>
+                        </div>
+                      </nav>
+                      
         </div>
+        
+        <!-- <div id="block" style="background-color:gray; color:white; padding-top: 2px; margin-top: 10px; ">
         <div id="location">
             Address:1650 El Camino Real, San Francisco-95123
             <img src="locationpic/Location.jpg" style="width:400px; height: 300px;">
@@ -72,57 +87,55 @@ a:hover, a:active {
                     Saturay 10:AM to 11:00 PM<br>   
                 </section>  
         </div>
-        </div>
-        <div id="section"> 
-            <nav>
-            <a href="catering.html">Catering</a>
-            <a href="bakery.html">Bakery</a>
-            <a href="delivery.html">Delivery</a>            
-            </nav>
-               <i><b><u><h1> Menu</h1></u></b></i><br>
-                <section class="menu">
-                <h2><b><i><u>Breakfast</u></b></i></h2><br>
-                <img src="Food/b_1.jpg" class = "foodp">
-                <img src="Food/b_2.jpg" style="float:right" class="foodp"><br><br>
-
-                French Toast<br>
-                Oatmeal<br>
-                Fruit Salad<br>
-                Smoothies<br>
-                
-            </section>
-            <br>
-                
-                <section class="menu">
-                <h2><b><i><u>Naan</u></i></b></h2><br>
-                <img src="Food/N_1.jpg" class = "foodp">
-                <img src="Food/N_2.jpg" style="float:right" class="foodp"><br><br>
-                Butter Naan<br>
-                Garlic Naan<br>
-                Onion Naan<br>
-            </section>
-            <br>
-                <section class="menu">
-                <h2><b><i><u>Curries</u></i></b></h2><br>
-                <img src="Food/C_1.jpg" class = "foodp">
-                <img src="Food/C_2.jpg" style="float:right" class="foodp"><br><br>
-                Butter Chicken<br>
-                Paneer Butter Masala<br>
-                Mutton Ghosh<br>
-            </section>
-            <br>
-                <section class="menu">
-                <h2><b><i><u>Desserts</u></i></b></h2><br>
-                <img src="Food/D_1.jpg" class = "foodp">
-                <img src="Food/D_2.jpg" style="float:right" class="foodp"><br><br>
-                Chocolate Brownie<br>
-                Apple Pie<br>
-                Ice-Cream<br>    
-            </section>
-            </p>
-            
+        </div>         -->
+        <div id="section" >   
+            <div class="container">
+                <div class="row">
+                   <p style="color:#D1E8E2;text-align: center;font-size: 40px;">Menu</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" style="border: 1px solid gray; border-radius: 2px; border-left:none;border-top:none;border-bottom: none"><h3 style="color:#D1E8E2">Breakfast</h3>
+                    <ul>
+                        <li><p id="oat">Oatmeal : $4.99</p></li>                        
+                        <li><p id="french">French Toast : $8.99 </p></li>
+                        <li><p id="egg">Egg Sandwich : $10.99</p></li>
+                        <li><p id="fruit">Fruit Juice Box : $11.99 </p></li>
+                    </ul></div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-md-6 offset-md-1" style="border: 1px solid gray; border-radius: 2px; border-left:none;border-top:none;border-bottom: none"><h3 style="color:#D1E8E2">Lunch</h3>
+                        <ul>
+                        <li><p>Fish Taco :</p></li>
+                        <li><p>Shrimp Tomato Salad :</p></li>
+                        <li><p>Crab Melts :</p></li>
+                        <li><p>Lobster Rolls : </p></li>
+                    </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                        <div class="col-md-6" style="border: 1px solid gray; border-radius: 2px; border-left:none;border-top:none;border-bottom: none"><h3 style="color:#D1E8E2">Breakfast</h3>
+                        <ul>
+                            <li><p>Oatmeal :</p></li>                        
+                            <li><p>French Toast : </p></li>
+                            <li><p>Egg Sandwich : </p></li>
+                            <li><p>Fruit Juice Box : </p></li>
+                        </ul></div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-md-6 offset-md-1" style="border: 1px solid gray; border-radius: 2px; border-left:none;border-top:none;border-bottom: none"><h3 style="color:#D1E8E2">Lunch</h3>
+                            <ul>
+                            <li><p>Fish Taco :</p></li>
+                            <li><p>Shrimp Tomato Salad :</p></li>
+                            <li><p>Crab Melts :</p></li>
+                            <li><p>Lobster Rolls : </p></li>
+                        </ul>
+                        </div>
+                    </div>
 
             </div>    
-        </div>
+        </div>    
+        <hr>
+        <footer>
+            <p style="text-align: center; font-size: 20px;">Address:
+        </footer>
     </body>
 </html>
