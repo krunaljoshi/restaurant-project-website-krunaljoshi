@@ -36,7 +36,7 @@
    {% for prize in prizes %}
    <tr>
    <td>{{prize.year}}</td>
-   <td>{{prize.category}}</td>
+   <td>{{prize.laureates[0].firstname}} {{prize.laureates[0].surname}}</td>
    <td>{{prize.laureates[0].motivation}}</td>
    </tr>
    {% endfor %}
