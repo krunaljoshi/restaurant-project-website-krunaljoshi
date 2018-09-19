@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Nobel Prizes in {{catDates.title}}</title>
+   <link rel="stylesheet" href="prizes.css"> 
+  
+</head>
+
+<body>
+  <main>
+  
+  
+    <h1>Nobel Prizes in {{catDates.title}}</h1>
+      <h2>From {{catDates.start}}  to {{catDates.end}} </h2>
+      
+      <nav>
+          <p> Other categories: 
+<!-- Links to other pages. Generate these from data passed in -->
+            
+            {% for catDate in cat %}
+                <a class="nav-link" href="{{catDate.fname}}" data-toggle="tooltip" title="{{catDate.topic}}">{{catDate.topic}}</a>
+              {% endfor %}
+      </nav>
+<table>
+
+    <thead><tr>
+        <th>Year</th> 
+        <th>Name</th> 
+        <th>Accomplishment</th>
+        </tr></thead>
+   <!-- Generate the table here. -->
+   {% for prize in prizes %}
+   <tr>
+   <td>{{prize.year}}</td>
+   <td>{{prize.category}}</td>
+   <td>{{prize.laureates[0].motivation}}</td>
+   </tr>
+   {% endfor %}
+    </tbody>
+      </table>
+  </main>
+</body>
+
+</html>
